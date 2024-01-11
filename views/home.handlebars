@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {{#each products}}
+            <li>{{this.title}} - {{this.price}}</li>
+        {{/each}}
+    </ul>
+
+    <!-- Incluir el script del cliente Socket.IO al final del cuerpo -->
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+        const socket = io();
+
+        // Aquí puedes escuchar eventos y realizar acciones en respuesta a esos eventos
+        socket.on('productoCreado', (nuevoProducto) => {
+            // Lógica para actualizar la vista con el nuevo producto
+        });
+
+        socket.on('productoEliminado', (idProducto) => {
+            // Lógica para actualizar la vista al eliminar un producto
+        });
+    </script>
+</body>
+</html>

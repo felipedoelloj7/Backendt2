@@ -1,0 +1,46 @@
+[
+    {
+        "id": "1",
+        "title": "Frutas",
+        "description": "Diferentes tipos de frutas",
+        "code": "FRUTAS001",
+        "price": 0,
+        "status": true,
+        "stock": 0,
+        "category": "Frutas",
+        "thumbnails": []
+    },
+    {
+        "id": "2",
+        "title": "Banana",
+        "description": "Fruta amarilla",
+        "code": "BANANA001",
+        "price": 1.5,
+        "status": true,
+        "stock": 100,
+        "category": "Frutas",
+        "thumbnails": ["banana.jpg"]
+    },
+    {
+        "id": "3",
+        "title": "Frutilla",
+        "description": "Fruta roja y dulce",
+        "code": "FRUTILLA001",
+        "price": 2,
+        "status": true,
+        "stock": 50,
+        "category": "Frutas",
+        "thumbnails": ["frutilla.jpg"]
+    },
+    {
+        "id": "4",
+        "title": "Sandía",
+        "description": "Fruta grande y jugosa",
+        "code": "SANDIA001",
+        "price": 3,
+        "status": true,
+        "stock": 30,
+        "category": "Frutas",
+        "thumbnails": ["sandia.jpg"]
+    }
+]

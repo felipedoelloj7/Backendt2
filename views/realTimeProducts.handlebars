@@ -1,0 +1,26 @@
+<script>
+    const socket = io();
+
+    // Manejar evento de producto creado
+    socket.on('productoCreado', (nuevoProducto) => {
+        // Actualizar la lista de productos en la vista
+        const productList = document.querySelector('ul');
+        const newItem = document.createElement('li');
+        
+        // Agregar un atributo data-id para identificación futura
+        newItem.setAttribute('data-id', nuevoProducto.id);
+
+        newItem.textContent = `${nuevoProducto.title} - ${nuevoProducto.price}`;
+        productList.appendChild(newItem);
+    });
+
+    // Manejar evento de producto eliminado
+    socket.on('productoEliminado', (idProducto) => {
+        // Actualizar la lista de productos en la vista
+        const productList = document.querySelector('ul');
+        const itemToRemove = productList.querySelector(`li[data-id="${idProducto}"]`);
+        if (itemToRemove) {
+            productList.removeChild(itemToRemove);
+        }
+    });
+</script>
